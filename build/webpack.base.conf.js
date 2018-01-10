@@ -21,22 +21,25 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json','vue'],
+    extensions: ['.js', '.vue', '.json', 'vue'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       'components': resolve('src/components'),
+      'router': resolve('src/router'),
+      'store': resolve('src/store'),
+      'assets': resolve('src/assets')
     }
   },
   module: {
     rules: [
-      ...(config.dev.useEslint? [{
+      ...(config.dev.useEslint ? [{
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
         include: [resolve('src'), resolve('test')],
         options: {
           formatter: require('eslint-friendly-formatter'),
-          emitWarning: !config.dev.showEslintErrorsInOverlay
+          emitWarning: ! config.dev.showEslintErrorsInOverlay
         }
       }] : []),
       {
