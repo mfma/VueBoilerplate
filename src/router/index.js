@@ -1,15 +1,21 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HomePage from 'components/page/Home';
+import Recommend from 'components/page/Recommend';
+import Society from 'components/page/Society';
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HomePage',
-      component: HomePage
+      path: '/recommend',
+      name: 'Recommend',
+      component: Recommend
+    },
+    {
+      path: '/society',
+      name: 'Society',
+      component: Society
     }
   ]
 });
