@@ -2,17 +2,15 @@
 <template>
   <div class="ma-container">
     <div class="ma-navbar-layout">
-      <div>
-        <mt-navbar v-model='selected' class="ma-navbar">
-          <mt-tab-item v-for="(value, key, index) in navbarData" :id='key' :key=key
-                       @click.native="handleTabClick">
-            {{value}}
-          </mt-tab-item>
-        </mt-navbar>
-      </div>
+      <mt-navbar v-model='selected' class="ma-navbar">
+        <mt-tab-item v-for="(value, key, index) in navbarData" :id='key' :key=key
+                     @click.native="handleTabClick">
+          {{value}}
+        </mt-tab-item>
+      </mt-navbar>
       <i class="ma-add-category fa fa-plus"/>
     </div>
-    <router-view></router-view>
+    <router-view class="ma-page"></router-view>
   </div>
 </template>
 
@@ -40,12 +38,13 @@
   .ma-navbar .is-selected.mint-tab-item {
     white-space: nowrap;
     display: inline-block;
-    padding: 10px;
+    padding: 0 15px 0 0;
     border: none;
   }
 
   .ma-navbar .is-selected.mint-tab-item {
-    color: red
+    color: red;
+    margin-bottom: 0;
   }
 
   .ma-navbar .mint-tab-item-label {
@@ -55,29 +54,28 @@
 
 <style scoped>
   .ma-container {
-    height:100%;
-    border: 1px solid blue;
+    height: 100%;
+    padding-top: 34px;
+    box-sizing: border-box;
   }
 
   .ma-navbar-layout {
-    width: 100%;
     height: 34px;
+    margin-top: -34px;
     display: flex;
-  }
-
-  .ma-navbar-layout > div:first-child {
-    width: calc(100% - 36px);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
   }
 
   .ma-navbar {
-    width: 100%;
     height: 30px;
-    margin-bottom: 15px;
+    margin-right: 15px;
+    align-items: center;
+    justify-content: space-between;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     overflow-y: hidden;
-    white-space: nowrap;
-    margin-right: 30px;
   }
 
   .ma-navbar::-webkit-scrollbar { /*滚动条整体样式*/
@@ -89,10 +87,15 @@
   .ma-add-category {
     color: black;
     font-weight: lighter;
-    width: 34px;
-    height: 34px;
-    line-height: 34px;
     font-size: 18px;
+    flex: 0 0 auto;
+  }
+
+  .ma-page {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 
 </style>

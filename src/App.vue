@@ -31,6 +31,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
+    overflow: hidden;
   }
 
   #app {
@@ -38,5 +39,6 @@
     height: 100%;
     padding: 44px 0 44px 0;
     box-sizing: border-box;
+    overflow: hidden;
   }
 </style>

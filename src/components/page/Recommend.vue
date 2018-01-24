@@ -1,14 +1,18 @@
-<!--suppress JSUnusedGlobalSymbols, JSUnresolvedVariable -->
+<!--suppress CssUnusedSymbol, JSUnusedGlobalSymbols -->
 <template>
   <div class="ma-recommend-page">
-
+    <MaList :data="data"/>
   </div>
 </template>
 
 <script>
   import { mapState } from 'vuex';
+  import MaList from './List';
 
   export default {
+    components: {
+      MaList
+    },
     computed: {
       ...mapState({
         data: state => state.recommend.data
@@ -19,30 +23,15 @@
         console.log('=========加载完成===========');
       });
     },
-    created () {
-    },
-    mounted () {
-    },
-    beforeUpdate () {
-    },
-    updated () {
-    },
-    activated () {
-    },
-    deactivated () {
-    },
-    beforeDestroy () {
-    },
-    destroyed () {
-    },
-    errorCaptured () {
-    },
     methods: {}
-  }
-  ;
+  };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+
+
+</style>
+
 <style scoped>
 
 </style>
