@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Recommend from 'components/page/Recommend';
-import Society from 'components/page/Society';
+import Page from 'components/Page';
 
 Vue.use(Router);
 
@@ -10,12 +9,7 @@ export default new Router({
     {
       path: '/recommend',
       name: 'Recommend',
-      component: Recommend
-    },
-    {
-      path: '/society',
-      name: 'Society',
-      component: Society
+      component: Page
     }
   ]
 });

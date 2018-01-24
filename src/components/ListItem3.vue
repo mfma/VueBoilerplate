@@ -9,7 +9,7 @@
     <div class="ma-list-info">
       <span class="ma-list-author">{{data.author_name}}</span>
       <span class="ma-list-date">{{data.date}}</span>
-      <i class="ma-camera-icon fa fa-window-close-o"></i>
+      <i class="ma-list-delete fa fa-window-close-o"></i>
     </div>
   </div>
 </template>

@@ -10,7 +10,7 @@
       </mt-navbar>
       <i class="ma-add-category fa fa-plus"/>
     </div>
-    <router-view class="ma-page"></router-view>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -89,13 +89,6 @@
     font-weight: lighter;
     font-size: 18px;
     flex: 0 0 auto;
-  }
-
-  .ma-page {
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
   }
 
 </style>

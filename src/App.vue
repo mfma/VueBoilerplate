@@ -7,8 +7,8 @@
 </template>
 
 <script>
-  import MaHeader from 'components/header/Header';
-  import Container from 'components/page/Container';
+  import MaHeader from 'components/Header';
+  import Container from 'components/Container';
   import MaFooter from 'components/Footer';
 
   export default {

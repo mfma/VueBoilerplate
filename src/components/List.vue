@@ -1,16 +1,15 @@
 <!--suppress CssUnusedSymbol -->
 <template>
-  <div>
-    <mt-cell-swipe class="ma-list-item" v-for="item in data" :key="item.uniquekey">
-      <ListItem0 :data='item' v-if="!item.thumbnail_pic_s"/>
-      <ListItem1 :data='item' v-if="item.thumbnail_pic_s&&!item.thumbnail_pic_s02"/>
-      <ListItem2 :data='item' v-if="item.thumbnail_pic_s02&&!item.thumbnail_pic_s03"/>
-      <ListItem3 :data='item' v-if="item.thumbnail_pic_s03"/>
-    </mt-cell-swipe>
-  </div>
+  <mt-cell-swipe class="ma-list-item" v-for="item in data" :key="item.uniquekey">
+    <ListItem0 :data='item' v-if="!item.thumbnail_pic_s"/>
+    <ListItem1 :data='item' v-if="item.thumbnail_pic_s&&!item.thumbnail_pic_s02"/>
+    <ListItem2 :data='item' v-if="item.thumbnail_pic_s02&&!item.thumbnail_pic_s03"/>
+    <ListItem3 :data='item' v-if="item.thumbnail_pic_s03"/>
+  </mt-cell-swipe>
 </template>
 
 <script>
+  import Page from './Page';
   import ListItem0 from './ListItem0';
   import ListItem1 from './ListItem1';
   import ListItem2 from './ListItem2';
@@ -23,7 +22,8 @@
       ListItem0,
       ListItem1,
       ListItem2,
-      ListItem3
+      ListItem3,
+      Page
     }
   };
 </script>
@@ -57,10 +57,27 @@
     padding: 10px 0 0 0;
     display: flex;
     font-size: 12px;
+    align-items: flex-start;
+  }
+
+  .ma-list-info span {
+    align-items: flex-start;
+  }
+
+  .ma-list-author,
+  .ma-list-date,
+  .ma-list-delete {
+    flex: 0 0 auto;
   }
 
   .ma-list-author {
     margin-right: 10px;
+  }
+
+  .ma-list-delete {
+    flex: 1 0 auto;
+    text-align: right;
+    border-radius: 10px;
   }
 </style>
 
