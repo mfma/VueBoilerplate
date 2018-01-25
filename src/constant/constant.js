@@ -11,6 +11,14 @@ export const navbarData = {
   'miltary': '军事'
 };
 
+export const tabbarData = {
+  'home': '首页',
+  'videos': '西瓜视频',
+  'answer': '答题赢钱',
+  'headline': '微头条',
+  'mine': '我的'
+};
+
 export const GET_NEWS_TYPE = {
   GET_RECOMMEND: 'recommend',
   GET_SOCIETY: 'society'

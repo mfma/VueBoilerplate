@@ -53,6 +53,7 @@
 </style>
 
 <style scoped>
+
   .ma-container {
     height: 100%;
     padding-top: 34px;

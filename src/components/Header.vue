@@ -1,7 +1,7 @@
 <template>
   <header class="ma-header">
     <div class="ma-header-search">
-      <i class="ma-header-search-icon fa fa-search"/>
+      <i class="ma-header-search-icon fa fa-search"></i>
       <input class="ma-header-search-placeholder" readonly type="search" placeholder="搜索"/>
     </div>
     <i class="ma-camera-icon fa fa-camera"></i>

@@ -1,5 +1,4 @@
 <!--suppress ALL -->
-
 <template>
   <div class="ma-page">
     <mt-cell-swipe class="ma-list-item" v-for="item in data" :key="item.uniquekey">
@@ -41,6 +40,7 @@
 </script>
 
 <style>
+
   .ma-page {
     height: 100%;
     overflow-x: hidden;
